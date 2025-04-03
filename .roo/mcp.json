@@ -1,0 +1,88 @@
+{
+  "mcpServers": {
+    "npm-docs": {
+      "command": "node",
+      "args": [
+        "/Users/jt/Documents/Cline/MCP/npm-docs-server/build/index.js"
+      ],
+      "disabled": false,
+      "alwaysAllow": []
+    },
+    "perplexity-server": {
+      "command": "node",
+      "args": [
+        "/Users/jt/Documents/Cline/MCP/mcp-perplexity-server/build/index.js"
+      ],
+      "disabled": false,
+      "alwaysAllow": [
+        "search_web"
+      ],
+      "env": {
+        "PERPLEXITY_API_KEY": "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"
+      }
+    },
+    "github.com/alexander-zuev/supabase-mcp-server": {
+      "command": "/Users/jt/.local/bin/supabase-mcp-server",
+      "disabled": true,
+      "alwaysAllow": [
+        "get_schemas",
+        "get_management_api_spec",
+        "get_auth_admin_methods_spec",
+        "get_table_schema",
+        "get_tables",
+        "live_dangerously",
+        "execute_postgresql"
+      ],
+      "env": {
+        "SUPABASE_PROJECT_REF": "igyrkokjtrhsnrivmotx",
+        "SUPABASE_DB_PASSWORD": "ZgP5f9mkUr1GSeFC",
+        "SUPABASE_REGION": "ap-southeast-1"
+      }
+    },
+    "github.com/stripe/agent-toolkit": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@stripe/mcp",
+        "--tools=all",
+        "--api-key=***REMOVED_STRIPE_KEY***"
+      ],
+      "disabled": false,
+      "alwaysAllow": [
+        "retrieve_balance",
+        "search_documentation"
+      ]
+    },
+    "github.com/Garoth/sendgrid-mcp": {
+      "command": "node",
+      "args": [
+        "/Users/jt/Documents/Cline/MCP/github.com/Garoth/sendgrid-mcp/build/index.js"
+      ],
+      "env": {
+        "SENDGRID_API_KEY": "***REMOVED_SENDGRID_KEY***"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "list_contacts",
+        "list_contact_lists",
+        "list_templates",
+        "list_single_sends",
+        "get_single_send",
+        "list_verified_senders",
+        "list_suppression_groups",
+        "get_stats",
+        "validate_email"
+      ],
+      "alwaysAllow": [
+        "list_verified_senders",
+        "list_templates"
+      ]
+    }
+  }
+}
+,
+"projectSettings": {
+  "projectName": "webportfolio",
+  "projectPath": "/Users/jt/Documents/GitHub/webportfolio",
+  "configFile": ".roo/mcp.json"
+}
